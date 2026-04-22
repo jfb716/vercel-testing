@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vercel Testing",
-  description: "Clean Next.js project scaffold",
+  title: "Showtime",
+  description: "Track your shows. Know what's on tonight.",
 };
 
 export default function RootLayout({
