@@ -1,6 +1,16 @@
-# Vercel Testing
+# Showtime
 
-Minimal Next.js 16 app scaffold with TypeScript, Tailwind CSS v4, and ESLint.
+Track when your shows are on. Built with Next.js 16, TypeScript, and Tailwind CSS v4.
+
+## Routes
+
+| Route | Description |
+|---|---|
+| `/` | Home / landing |
+| `/trending` | Trending shows |
+| `/tonight` | What's on tonight |
+| `/watchlist` | Your saved shows |
+| `/shows/[slug]` | Individual show page |
 
 ## Scripts
 
@@ -11,8 +21,6 @@ npm run start
 npm run lint
 ```
 
-## Project Notes
+## Notes
 
-- The default starter UI and template assets have been removed.
-- Static metadata lives in the `app` directory, including `app/favicon.ico`.
-- Project-specific AI instructions live in `AGENTS.md`.
+- Static pages are SSG/CDN-cached; a `RenderingBadge` component labels each page's render mode.
