@@ -2,10 +2,10 @@
 import { useState, useEffect } from 'react'
 
 function getWatchlist(): number[] {
-  const match = document.cookie.split('; ').find(r => r.startsWith('watchlist='))
+  const match = document.cookie.split(/;\s*/).find(r => r.startsWith('watchlist='))
   if (!match) return []
   try {
-    return JSON.parse(decodeURIComponent(match.split('=')[1]))
+    return JSON.parse(decodeURIComponent(match.slice('watchlist='.length)))
   } catch {
     return []
   }
