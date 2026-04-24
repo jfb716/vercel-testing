@@ -72,15 +72,9 @@ async function ShowContent({ params }: { params: Promise<{ slug: string }> }) {
             </Suspense>
           </div>
 
-          {/* Dynamic: watchlist button — reads cookie client-side after hydration */}
+          {/* Client component — no Suspense needed, doesn't suspend server-side */}
           <div className="mt-4">
-            <Suspense fallback={
-              <button className="px-4 py-2 bg-gray-800 text-gray-500 rounded-lg text-sm font-medium cursor-default">
-                + Add to Watchlist
-              </button>
-            }>
-              <WatchlistButton showId={show.id} />
-            </Suspense>
+            <WatchlistButton showId={show.id} />
           </div>
         </div>
       </div>
